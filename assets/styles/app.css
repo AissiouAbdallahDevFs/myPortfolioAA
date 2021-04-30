@@ -10129,6 +10129,12 @@ section.resume-section .resume-section-content {
   width: 100%;
 }
 
+.btnn{
+ width: 50%;
+ margin: 1rem;
+ padding: 2rem;
+}
+
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;

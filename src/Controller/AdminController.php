@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminController extends AbstractController
 {
+    
     #[Route('/admin', name: 'admin')]
         public function admin(FormationRepository $formationRepository , ExperienceRepository $experienceRepository): Response
         {
