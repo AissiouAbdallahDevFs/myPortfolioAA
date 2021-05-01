@@ -27,10 +27,13 @@
         </tbody>
     </table>
 
-    <a href="{{ path('formation_index') }}">back to list</a>
+    <a href="{{ path('formation_index') }}"><i class="fas fa-arrow-circle-left"></a>
 
-    <a href="{{ path('formation_edit', {'id': formation.id}) }}">edit</a>
+    <a href="{{ path('formation_edit', {'id': formation.id}) }}"><i class="fas fa-user-edit"></i></a>
+
+ 
 
     {{ include('formation/_delete_form.html.twig') }}
 </div>
 {% endblock %}
+

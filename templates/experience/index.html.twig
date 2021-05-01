@@ -3,39 +3,39 @@
 {% block title %}Experience index{% endblock %}
 
 {% block body %}
-    <h1>Experience index</h1>
+<h1>Experience index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Entreprise</th>
-                <th>Poste</th>
-                <th>Description</th>
-                <th>Date</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Entreprise</th>
+            <th>Poste</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
         {% for experience in experiences %}
-            <tr>
-                <td>{{ experience.id }}</td>
-                <td>{{ experience.Entreprise }}</td>
-                <td>{{ experience.Poste }}</td>
-                <td>{{ experience.Description }}</td>
-                <td>{{ experience.date ? experience.date|date('Y-m-d') : '' }}</td>
-                <td>
-                    <a href="{{ path('experience_show', {'id': experience.id}) }}">show</a>
-                    <a href="{{ path('experience_edit', {'id': experience.id}) }}">edit</a>
-                </td>
-            </tr>
+        <tr>
+            <td>{{ experience.id }}</td>
+            <td>{{ experience.Entreprise }}</td>
+            <td>{{ experience.Poste }}</td>
+            <td>{{ experience.Description }}</td>
+            <td>{{ experience.date ? experience.date|date('Y-m-d') : '' }}</td>
+            <td>
+                <a href="{{ path('experience_show', {'id': experience.id}) }}"><i class="fas fa-eye"></i></a>
+                <a href="{{ path('experience_edit', {'id': experience.id}) }}"><i class="fas fa-user-edit"></i></a>
+            </td>
+        </tr>
         {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
+        <tr>
+            <td colspan="6">no records found</td>
+        </tr>
         {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('experience_new') }}">Create new</a>
+    </tbody>
+</table>
+<a href="{{ path('admin') }}"><i class="fas fa-arrow-circle-left"></i></a>
+<a href="{{ path('experience_new') }}"><i class="fas fa-plus-circle"></i></a>
 {% endblock %}

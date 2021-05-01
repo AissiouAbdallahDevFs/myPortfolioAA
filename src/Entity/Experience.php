@@ -28,7 +28,7 @@ class Experience
     private $Poste;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", length=255)
      */
     private $Description;
 
