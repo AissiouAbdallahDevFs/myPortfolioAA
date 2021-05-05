@@ -12,7 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 class HomePageController extends AbstractController
 {
-    #[Route('/home', name: 'home_page')]
+    #[Route('/', name: 'home_page')]
     public function home(FormationRepository $formationRepository , ExperienceRepository $experienceRepository): Response
     {
         return $this->render('home_page/index.html.twig', [

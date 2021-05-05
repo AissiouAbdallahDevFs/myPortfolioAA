@@ -56,9 +56,9 @@
                     <div class="flex-grow-1">
                         <h3 class="mb-0">{{ Experience.Entreprise }}</h3>
                         <div class="subheading mb-3">{{ Experience.Poste }}</div>
-                        <p>
-                            {{ Experience.Description }}
-                        </p>
+                        <ul>
+                            <li>{{ Experience.Description }}</li>
+                        </ul>
                     </div>
                     <div class="flex-shrink-0"><span
                             class="text-primary">{{ Experience.Date ? Experience.Date|date('Y-m-d') : '' }}</span></div>
